@@ -1,3 +1,5 @@
+# Apuntes Linux Día 2
+## Gestión de ficheros
 Para gestionar los ficheros son esenciales los siguientes comandos:
 - `cd`: cambiar directorio. Si no se le añade ninguna opción, cambia al ==directorio de inicio== (abreviado como ~)
 - `pwd`: imprimir el directorio de trabajo actual. Muy útil para saber en cada momento en que lugar del PATH estamos.
@@ -36,7 +38,7 @@ Otra variable de entorno es $**PWD** que al igual que $**HOME** es una variable 
 Para crear notas se puede usar `touch notas.txt`
 Para moverse entre directorios es super útil usar el autocompletar con el Tab, para ello se puede mirar primero los directorios dentro del directorio actual usando `ls`, o simplemente poner ``cd `` y hacer ==doble Tab== y luego elegir el directorio que nos interese viendolo en la lista. (**Importante**, dejar un espacio despues del `cd `, sino el terminal querrá autocompletar el comando cd, no nos dirá los posibles directorios a donde saltar)
 
-# Metaarácteres útiles para trabajar en bash
+## Metaarácteres útiles para trabajar en bash
 - ``\``: tambien conocido como _escape_, preserva el valor literal del siguiente carácter que sigue, con la excepción de la nueva línea:
 	- Si por ejemplo se escribe `$ echo variable ; argumento`, el punto y coma actua como carácacter especial y no se va a imprimir el texto entero, da error de comando. Si se escribe `$ echo variable \; argumento`, ahí si se va a imprimir el texto `variable; argumento`, ya que el punto y coma se interpreta como valor literal, no como meta carácter.
 	- Otro ejemplo es para crear documentos con espacios, ya que un espacio es un metacarácter que indica separación. Si escribes `touch mi texto.txt` y haces un `ls mi*txt`, da error porque no hay ningun documento guardado como `mi texto.txt`, sino que seria solo `texto.txt`. Para solucionarlo, se escribiria `touch mi\ texto.txt` y así el espacio se interpreta como carácter literal de espacio, no como metacarácter separador.
